@@ -1,4 +1,8 @@
-const input = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./2296.txt";
+const input = require("fs")
+  .readFileSync(filePath)
+  .toString()
+  .split("\n");
 const N = +input.shift();
 
 const v = [];
